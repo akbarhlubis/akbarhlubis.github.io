@@ -4,37 +4,11 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-
-    position: absolute;
-    width: 1334.35px;
-    height: 79.98px;
-    left: 63px;
-    top: 46px;
-}
 
 .container .menu ul li{
     list-style: none;
 }
 
-.hero-logo{
-    position: absolute;
-    width: 2296.48px;
-    height: 1229.81px;
-    left: -754px;
-    top: 352.47px;
-
-    background: linear-gradient(182.92deg, #F8F8F8 31.3%, rgba(248, 248, 248, 0) 97.57%);
-    mix-blend-mode: normal;
-    border-radius: 318.014px;
-    transform: rotate(-17.18deg);
-}
-
 .hero img{
-    
+    width: 100%;
 }
