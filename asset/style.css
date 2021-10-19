@@ -5,10 +5,18 @@
     font-weight: 500;
 }
 
-.container .menu ul li{
-    list-style: none;
-}
 
-.hero img{
-    width: 100%;
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: url("icon/Hero-Logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    
+}
+header.masthead h1{
+    font-size: 50px;
+    font-weight: bold;
 }
