@@ -20,3 +20,7 @@ header.masthead h1{
     font-size: 50px;
     font-weight: bold;
 }
+
+header.masthead span{
+    background-color: #FD6D6D;
+}
