@@ -24,3 +24,21 @@ header.masthead h1{
 header.masthead span{
     background-color: #FD6D6D;
 }
+#hero span{
+    background-color: #FD6D6D;
+}
+#hero h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#hero{
+    padding-top: 10vh;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: url("icon/Hero-Logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    
+}
