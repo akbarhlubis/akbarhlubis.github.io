@@ -1,128 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Akbar Hamonangan Lubis">
-  <link rel="stylesheet" href="asset/style.css">
-  <title>Akbar Hamonangan Lubis - Portofolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
-  <script async src="https://tally.so/widgets/embed.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="icon" href="asset/icon/Favicon.png" type="image/icon type">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akbar Lubis — Fullstack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
+<script type="application/json" id="tweak-defaults">
+{
+  "accentColor": "#ff2d20",
+  "projectLayout": "bento",
+  "showCursor": true,
+  "bgColor": "#080808"
+}
+</script>
+<link rel="stylesheet" href="/asset/style.css">
+</head>
 <body>
-  <!-- Back to top button -->
-<a id="button"></a>
-  <!-- navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand h-auto w-auto" href="#">
-        <img class="mw-50" src="asset/icon/Logo.png" alt="logo al" width="70%">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item text-center me-sm-5">
-            <a class="nav-link active rounded-pill" aria-current="page"
-              href="#">Home</a>
-          </li>
-          <li class="nav-item text-center me-sm-5">
-            <a class="nav-link" href="https://akbarhlubis.github.io/personal-simple-bootstrapp/" target="_blank">Blog</a>
-          </li>
-          <li class="nav-item text-center me-sm-5 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Portofolio
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">UX Research</a></li>
-              <li><a class="dropdown-item" href="#">UI Design</a></li>
-              <li><a class="dropdown-item" href="#">Desain Graphics</a></li>
-              <li><a class="dropdown-item" href="#">Web Development</a></li>
-              <li><a class="dropdown-item" href="#">Mobile Development</a></li>
-            </ul>
-          </li>
-          <li class="nav-item text-center me-sm-5">
-            <a data-tally-open="wMBqYn" data-tally-emoji-text="📞" data-tally-emoji-animation="heart-beat" class="text-white nav-link rounded-pill" href="#" style="background: linear-gradient(117.58deg, #FF9191 22.13%, #FACB63 93.75%);">Contact Me?</a>
-          </li>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#"><span>AKB</span>AR_LUBIS</a>
+  <ul class="nav-links">
+    <li><a href="#works">Works</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-tag">// PORTFOLIO — 2025</div>
+  <h1 class="hero-name">
+    <span class="first">AKBAR</span>
+    <span class="last">LUBIS</span>
+  </h1>
+  <div class="hero-role">$ <span class="typed" id="typed-role"></span><span class="cursor" id="cursor"></span></div>
+  <p class="hero-bio">A Fullstack Developer building scalable, high-performance web applications. Specializing in Laravel &amp; PHP backends with modern frontend experiences.</p>
+  <div class="hero-cta">
+    <a href="#works" class="btn-primary">VIEW WORKS</a>
+    <a href="#contact" class="btn-ghost">GET IN TOUCH</a>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="scroll-line"></span>
+    <span>SCROLL DOWN</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker-inner"></div>
+</div>
+
+<!-- WORKS -->
+<section id="works">
+  <span class="section-tag reveal">// 001 — SELECTED WORKS</span>
+  <h2 class="section-title reveal">Works I'm <em>Proud</em> Of</h2>
+  <div class="works-filter reveal">
+    <button class="filter-btn active" data-filter="all">ALL</button>
+    <button class="filter-btn" data-filter="web">WEB</button>
+    <button class="filter-btn" data-filter="mobile">MOBILE</button>
+    <button class="filter-btn" data-filter="automation">AUTOMATION</button>
+  </div>
+  <div class="bento-grid reveal" id="bento-grid">
+    <!-- Card 1: Large -->
+    <div class="project-card big-card" data-cat="web">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a1a1a 60%, #2a1010);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">LARAVEL</span><span class="card-tag">PHP</span><span class="card-tag">MYSQL</span></div>
+        <div class="card-title">E-Commerce Platform</div>
+        <div class="card-desc">Full-featured Laravel e-commerce with payment gateway integration, inventory management, and real-time analytics dashboard.</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+    <!-- Card 2 -->
+    <div class="project-card" data-cat="web">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0d1a1a 60%, #102020);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">VUE.JS</span><span class="card-tag">API</span></div>
+        <div class="card-title">Admin Dashboard</div>
+        <div class="card-desc">Real-time analytics &amp; management dashboard.</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+    <!-- Card 3 -->
+    <div class="project-card" data-cat="mobile">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a0d1a 60%, #200a20);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">MOBILE</span><span class="card-tag">API</span></div>
+        <div class="card-title">Mobile App Backend</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+    <!-- Card 4 -->
+    <div class="project-card" data-cat="automation">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #101a0d 60%, #162010);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">AUTOMATION</span></div>
+        <div class="card-title">CI/CD Pipeline</div>
+        <div class="card-desc">Automated deployment and testing workflows.</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+    <!-- Card 5 -->
+    <div class="project-card" data-cat="web">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a1409 60%, #201a0a);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">LARAVEL</span></div>
+        <div class="card-title">CMS Platform</div>
+        <div class="card-desc">Custom CMS built with Laravel Filament.</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+    <!-- Card 6 -->
+    <div class="project-card" data-cat="web">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0d0d1a 60%, #10102a);">
+        <span style="position:relative;z-index:1;">project screenshot</span>
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="card-tag">PHP</span><span class="card-tag">REST API</span></div>
+        <div class="card-title">REST API Service</div>
+        <div class="card-desc">Scalable microservices API architecture.</div>
+      </div>
+      <div class="card-overlay"><a class="card-link" href="#">VIEW PROJECT →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <span class="section-tag reveal">// 002 — EXPERTISE</span>
+  <h2 class="section-title reveal">How I <em>Build</em> Things</h2>
+  <div class="skills-grid reveal" id="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-name">BACKEND</div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Laravel / PHP</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">MySQL / PostgreSQL</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">REST API Design</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Redis / Queues</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-name">FRONTEND</div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">JavaScript / Vue.js</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">HTML / CSS / Tailwind</span><span class="skill-pct">92%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Livewire / Alpine</span><span class="skill-pct">83%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="83"></div></div></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-name">DEVOPS / TOOLS</div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Git / GitHub</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Docker / Linux</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">CI/CD / Automation</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <span class="section-tag reveal">// 003 — ABOUT ME</span>
+  <div class="about-grid">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo">
+        <div class="about-frame"></div>
+        <span style="position:relative;z-index:1;">
+          <img src="/asset/img/photo-akbar.png" alt="Foto Akbar Lubis">
+        </span>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num">4+</div><div class="stat-label">YEARS EXP</div></div>
+        <div class="stat"><div class="stat-num">30+</div><div class="stat-label">PROJECTS</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">CLIENTS</div></div>
+        <div class="stat"><div class="stat-num">99%</div><div class="stat-label">SATISFACTION</div></div>
       </div>
     </div>
-  </nav>
-  <!-- navbar End -->
+    <div class="about-text reveal">
+      <h2 class="section-title" style="margin-bottom:32px;">The <em>Dev</em> Behind the Code</h2>
+      <p>I'm <strong>Akbar Lubis</strong>, a Fullstack Web Developer specializing in <strong>Laravel and PHP</strong> ecosystems. I build end-to-end web applications — from architecting robust backends to crafting smooth frontend experiences.</p>
+      <p>My background spans diverse projects across <strong>e-commerce, content management, automation,</strong> and <strong>API development</strong>. I care about writing clean, maintainable code that scales.</p>
+      <p>When I'm not coding, I'm writing articles to share what I've learned with the developer community.</p>
+      <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
+        <a href="#contact" class="btn-primary">HIRE ME</a>
+        <a href="#works" class="btn-ghost">SEE MY WORK</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="container-fluid" id="hero">
-    <div class="row text-lg-center">
-      <div class="col">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-          <div class="col-lg-8 align-self-end mt-5">
-            <h1 class="text-black font-weight-bold">Halo, Saya Akbar Hamonangan Lubis</h1>
-          </div>
-          <div class="col-lg-8 align-self-baseline text">
-            <p class="mb-1">Seorang mahasiswa semester akhir dari jurusan Informatika asal Bandar Lampung yang meminati bidang <strong> UX/UI Design, Web/Mobile Development</strong> dan <strong>Linux</strong>.</p>
-            <span class="badge rounded-pill">Linux</span>
-            <span class="badge rounded-pill">UX/UI</span>
-            <span class="badge rounded-pill">Python</span>
-            <span class="badge rounded-pill">Flutter</span>
-            <span class="badge rounded-pill">HTML</span>
-            <span class="badge rounded-pill">CSS</span>
-          </div>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <span class="section-tag reveal">// 004 — TESTIMONIALS</span>
+  <h2 class="section-title reveal">What People <em>Say</em></h2>
+  <div class="testi-track-wrap reveal">
+    <div class="testi-track" id="testi-track">
+      <div class="testi-card">
+        <p class="testi-text">"Akbar delivered an exceptional Laravel application ahead of schedule. His code is clean, well-documented and the architecture is solid. Highly recommended for any PHP project."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RK</div>
+          <div><div class="testi-name">Rudi Kusuma</div><div class="testi-role-label">CEO · STARTUP JAKARTA</div></div>
         </div>
       </div>
-      <div class="col d-none d-sm-block align-items-center text-center">
-        <img class="mt-5 mb-5" src="asset/img/pas-foto.png" alt="Pas Foto">
+      <div class="testi-card">
+        <p class="testi-text">"Working with Akbar was a pleasure. He understood our requirements perfectly and built a robust API that handles thousands of requests daily without any issues."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SP</div>
+          <div><div class="testi-name">Sari Permata</div><div class="testi-role-label">CTO · TECH VENTURES</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"The e-commerce platform Akbar built for us handles high traffic seamlessly. Great attention to detail and proactive communication throughout the project."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">BH</div>
+          <div><div class="testi-name">Budi Hartono</div><div class="testi-role-label">FOUNDER · RETAIL CO</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"Akbar automated our entire deployment pipeline which saved our team hours each week. Excellent technical skills and very professional to work with."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">NW</div>
+          <div><div class="testi-name">Nina Wulandari</div><div class="testi-role-label">PRODUCT MANAGER · AGENCY</div></div>
+        </div>
       </div>
     </div>
-  </section>
-  <img class="mw-100" src="asset/icon/Abstrack.1.png" alt="tes">
-  <!-- Hero end -->
-
-
-  <!-- About -->
-
-  <!-- About End -->
-
-  <!-- Footer -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="d-none d-sm-block mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <img src="asset/icon/Favicon.png" alt="logo">
-        </a>
-        <span class="text-muted">© 2021 Akbar Hamonangan Lubis</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li>
-          <a href="https://github.com/akbarhlubis/" target="_blank" style="color: #FD6D6D;">
-            <em class="bi bi-github me-2"></em>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/akbarhlubis1/" target="_blank" style="color: #FD6D6D;">
-            <em class="bi bi-instagram me-2"></em>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/channel/UCGVe0waMiFpj094kXvOTugA" target="_blank" style="color: #FD6D6D;">
-            <em class="bi bi-youtube me-2"></em>
-          </a>
-        </li>
-      </ul>
-    </footer>
   </div>
-  <!-- Footer End -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-</body>
+  <div class="testi-nav reveal" id="testi-nav"></div>
+</section>
 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <span class="section-tag">// 005 — CONTACT</span>
+      <h2 class="section-title" style="margin-bottom:24px;">Let's <em>Build</em><br>Something</h2>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;">Have a project in mind? I'd love to hear about it. Send me a message and let's get started.</p>
+      <a href="/cdn-cgi/l/email-protection#07666b72656e743f3047606a666e6b2964686a" class="contact-email"><span class="__cf_email__" data-cfemail="0d6c61786f647e353a4d6a606c6461236e6260">[email&#160;protected]</span></a>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-field">
+        <label class="form-label">YOUR NAME</label>
+        <input class="form-input" type="text" placeholder="John Doe">
+      </div>
+      <div class="form-field">
+        <label class="form-label">EMAIL</label>
+        <input class="form-input" type="email" placeholder="john@example.com">
+      </div>
+      <div class="form-field">
+        <label class="form-label">MESSAGE</label>
+        <textarea class="form-input" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;margin-top:8px;">SEND MESSAGE</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 AKBAR_LUBIS. ALL RIGHTS RESERVED.</span>
+  <span>FULLSTACK DEVELOPER · LARAVEL · PHP</span>
+</footer>
+
+<!-- TWEAKS PANEL -->
+<div id="tweaks-panel">
+  <h3>TWEAKS</h3>
+  <div class="tweak-row">
+    <span class="tweak-label">ACCENT COLOR</span>
+    <input type="color" class="tweak-color" id="tweak-accent" value="#ff2d20">
+  </div>
+  <div class="tweak-row">
+    <span class="tweak-label">PROJECT LAYOUT</span>
+    <select class="tweak-select" id="tweak-layout">
+      <option value="bento">Bento Grid</option>
+      <option value="list">List View</option>
+      <option value="masonry">Masonry</option>
+    </select>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="/asset/index.js"></script>
+</body>
 </html>
