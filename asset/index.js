@@ -83,5 +83,5 @@ function goTo(idx) {
   nav.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
 }
 
-setInterval(() => goTo((curTesti + 1) % cards.length), 4000);
+setInterval(() => goTo((curTesti + 1) % cards.length), 7000);
 
