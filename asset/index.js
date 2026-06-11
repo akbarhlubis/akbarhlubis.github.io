@@ -4,6 +4,22 @@ window.addEventListener('scroll', () => {
   navEl.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
+// ── THEME TOGGLE
+const themeToggle = document.getElementById('theme-toggle');
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+// load saved theme
+const saved = localStorage.getItem('theme');
+if (saved) setTheme(saved);
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  setTheme(current === 'light' ? 'dark' : 'light');
+});
+
 // ── NAV TOGGLE (hamburger)
 const toggleBtn = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');

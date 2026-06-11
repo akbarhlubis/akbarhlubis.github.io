@@ -13,6 +13,34 @@
   --radius: 4px;
 }
 
+/* light theme */
+[data-theme="light"] {
+  --bg: #f7f5f2;
+  --bg2: #ffffff;
+  --bg3: #eae8e4;
+  --text: #1a1816;
+  --muted: #8a8884;
+  --accent: #d63020;
+  --accent-dim: rgba(214,48,32,0.1);
+  --accent-glow: rgba(214,48,32,0.2);
+}
+
+[data-theme="light"] nav.scrolled { background: rgba(247,245,242,0.9); border-bottom-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .project-card { border-color: rgba(0,0,0,0.08); }
+[data-theme="light"] .stat { border-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .testi-card { border-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .skill-item { border-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .skill-level.proficient { background: rgba(0,0,0,0.04); }
+[data-theme="light"] .skill-level.intermediate { background: rgba(0,0,0,0.03); }
+[data-theme="light"] .skill-level.beginner { background: rgba(0,0,0,0.02); }
+[data-theme="light"] .works-filter { border-color: rgba(0,0,0,0.08); }
+[data-theme="light"] .filter-btn { border-right-color: rgba(0,0,0,0.08); color: var(--muted); }
+[data-theme="light"] .filter-btn.active { color: #fff; }
+[data-theme="light"] .form-input { border-color: rgba(0,0,0,0.1); background: var(--bg); }
+[data-theme="light"] .ticker { border-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .ticker-item { border-right-color: rgba(0,0,0,0.06); }
+[data-theme="light"] footer { border-top-color: rgba(0,0,0,0.06); }
+
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -52,6 +80,17 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
 .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* theme toggle */
+.theme-toggle {
+  background: none; border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer; font-size: 16px; line-height: 1;
+  padding: 6px 10px; margin-left: 16px;
+  transition: border-color 0.2s;
+  display: flex; align-items: center;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+[data-theme="light"] .theme-toggle { border-color: rgba(0,0,0,0.1); }
 
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
@@ -289,7 +328,32 @@ section { padding: 100px 48px; }
 .skill-level.intermediate { background: rgba(255,255,255,0.04); color: var(--muted); }
 .skill-level.beginner { background: rgba(255,255,255,0.02); color: #555; }
 
-/* ── ABOUT ── */
+/* ── CERTIFICATIONS ── */
+#certifications { background: var(--bg); }
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.cert-card {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+[data-theme="light"] .cert-card { border-color: rgba(0,0,0,0.08); }
+.cert-card:hover { border-color: var(--accent); }
+.cert-badge { font-size: 24px; line-height: 1; flex-shrink: 0; }
+.cert-body { display: flex; flex-direction: column; gap: 4px; }
+.cert-title { font-size: 13px; font-weight: 700; }
+.cert-issuer { font-size: 10px; color: var(--muted); letter-spacing: 0.1em; }
+.cert-link {
+  font-size: 10px; color: var(--accent);
+  text-decoration: none; letter-spacing: 0.05em;
+  word-break: break-all;
+}
+.cert-link:hover { text-decoration: underline; }
 #about { background: var(--bg); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .about-photo-wrap { position: relative; }
@@ -355,6 +419,8 @@ section { padding: 100px 48px; }
   font-size: 14px; font-weight: 700; color: var(--accent);
 }
 .testi-name { font-size: 13px; font-weight: 700; }
+.testi-link { color: var(--text); text-decoration: none; transition: color 0.2s; }
+.testi-link:hover { color: var(--accent); }
 .testi-role-label { font-size: 10px; letter-spacing: 0.15em; color: var(--muted); }
 .testi-nav { display: flex; gap: 8px; margin-top: 40px; }
 .testi-dot {
