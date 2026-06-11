@@ -4,6 +4,31 @@ window.addEventListener('scroll', () => {
   navEl.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
+// ── NAV TOGGLE (hamburger)
+const toggleBtn = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('active');
+  navLinks.classList.toggle('open');
+});
+
+// close on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    toggleBtn.classList.remove('active');
+    navLinks.classList.remove('open');
+  });
+});
+
+// close on click outside
+document.addEventListener('click', (e) => {
+  if (!navEl.contains(e.target)) {
+    toggleBtn.classList.remove('active');
+    navLinks.classList.remove('open');
+  }
+});
+
 // ── TICKER
 const skills = ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Docker', 'Linux', 'Git', 'Tailwind', 'AI Automation'];
 const ticker = document.getElementById('ticker-inner');
