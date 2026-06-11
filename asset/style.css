@@ -91,6 +91,8 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
 }
 .theme-toggle:hover { border-color: var(--accent); }
 [data-theme="light"] .theme-toggle { border-color: rgba(0,0,0,0.1); }
+[data-theme="light"] .nav-links { background: rgba(247,245,242,0.96); border-bottom-color: rgba(0,0,0,0.06); }
+[data-theme="light"] .nav-links a { border-bottom-color: rgba(0,0,0,0.04); }
 
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
@@ -111,6 +113,74 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
     font-size: 13px;
   }
   .nav-links li:last-child a { border-bottom: none; }
+  /* stack layouts */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo { max-width: 400px; margin: 0 auto; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .contact-form { max-width: 100%; }
+  /* bento → 2 columns */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 12px;
+  }
+  .project-card:nth-child(1),
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4),
+  .project-card:nth-child(5),
+  .project-card:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .project-card:nth-child(1) { grid-column: span 2; }
+  .big-card .card-img-placeholder { height: 50%; }
+  .big-card .card-body { padding: 20px; }
+  .big-card .card-title { font-size: 16px; }
+  .big-card .card-desc { font-size: 11px; }
+  /* section */
+  section { padding: 80px 32px; }
+  #hero { padding: 100px 32px 60px; }
+  .hero-name { font-size: clamp(40px, 12vw, 100px); }
+  .hero-name .first { font-size: 0.85em; }
+  .hero-scroll-hint { left: 32px; }
+  /* testimonials */
+  .testi-card { flex: 0 0 320px; padding: 28px; }
+  .testi-text { font-size: 12px; }
+  /* certs */
+  .certs-grid { grid-template-columns: 1fr; }
+  /* ticker */
+  .ticker { margin: 0 -32px; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 60px 20px; }
+  #hero { padding: 90px 20px 48px; }
+  .hero-name { font-size: clamp(36px, 14vw, 60px); }
+  .hero-bio { font-size: 12px; max-width: 100%; }
+  .hero-cta { flex-direction: column; }
+  .hero-scroll-hint { left: 20px; bottom: 24px; }
+  nav { padding: 12px 16px; }
+  .nav-logo { font-size: 11px; }
+  .theme-toggle { padding: 4px 8px; font-size: 14px; }
+  .bento-grid { grid-template-columns: 1fr; gap: 12px; }
+  .project-card:nth-child(1),
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4),
+  .project-card:nth-child(5),
+  .project-card:nth-child(6) { grid-column: span 1; }
+  .testi-card { flex: 0 0 280px; padding: 24px; }
+  .testi-card::before { font-size: 56px; top: 12px; right: 16px; }
+  .section-title { font-size: clamp(24px, 8vw, 36px); margin-bottom: 32px; }
+  .works-filter { width: 100%; }
+  .filter-btn { flex: 1; text-align: center; padding: 10px 12px; }
+  .about-stats { gap: 12px; }
+  .stat { padding: 14px; }
+  .stat-num { font-size: 28px; }
+  .contact-email { font-size: clamp(16px, 5vw, 24px); }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+  .ticker { margin: 0 -20px; }
 }
 
 /* focus-visible for keyboard nav */
