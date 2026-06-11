@@ -81,16 +81,22 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* theme toggle */
-.theme-toggle {
-  background: none; border: 1px solid rgba(255,255,255,0.1);
-  cursor: pointer; font-size: 16px; line-height: 1;
-  padding: 6px 10px; margin-left: 16px;
-  transition: border-color 0.2s;
-  display: flex; align-items: center;
+/* theme FAB */
+.theme-fab {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer; font-size: 20px; line-height: 1;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
-.theme-toggle:hover { border-color: var(--accent); }
-[data-theme="light"] .theme-toggle { border-color: rgba(0,0,0,0.1); }
+.theme-fab:hover { border-color: var(--accent); transform: scale(1.05); }
+[data-theme="light"] .theme-fab {
+  border-color: rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
 [data-theme="light"] .nav-links { background: rgba(247,245,242,0.96); border-bottom-color: rgba(0,0,0,0.06); }
 [data-theme="light"] .nav-links a { border-bottom-color: rgba(0,0,0,0.04); }
 
@@ -142,7 +148,7 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
   section { padding: 80px 32px; }
   #hero { padding: 100px 32px 60px; }
   .hero-name { font-size: clamp(40px, 12vw, 100px); }
-  .hero-name .first { font-size: 0.85em; }
+  .hero-name .first { font-size: 0.85em; overflow-wrap: break-word; }
   .hero-scroll-hint { left: 32px; }
   /* testimonials */
   .testi-card { flex: 0 0 320px; padding: 28px; }
@@ -157,12 +163,13 @@ nav.scrolled { background: rgba(8,8,8,0.85); backdrop-filter: blur(16px); border
   section { padding: 60px 20px; }
   #hero { padding: 90px 20px 48px; }
   .hero-name { font-size: clamp(36px, 14vw, 60px); }
+  .hero-name .first { font-size: 0.8em; overflow-wrap: break-word; }
   .hero-bio { font-size: 12px; max-width: 100%; }
   .hero-cta { flex-direction: column; }
   .hero-scroll-hint { left: 20px; bottom: 24px; }
   nav { padding: 12px 16px; }
   .nav-logo { font-size: 11px; }
-  .theme-toggle { padding: 4px 8px; font-size: 14px; }
+  .theme-fab { bottom: 16px; right: 16px; width: 42px; height: 42px; font-size: 18px; }
   .bento-grid { grid-template-columns: 1fr; gap: 12px; }
   .project-card:nth-child(1),
   .project-card:nth-child(2),
