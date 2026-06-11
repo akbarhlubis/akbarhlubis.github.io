@@ -60,20 +60,6 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 revealEls.forEach(el => obs.observe(el));
 
-// ── SKILL BARS
-const skillObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.skill-fill').forEach(bar => {
-        bar.style.width = bar.dataset.pct + '%';
-      });
-      skillObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.3 });
-const sg = document.getElementById('skills-grid');
-if (sg) skillObs.observe(sg);
-
 // ── FILTER BUTTONS
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
