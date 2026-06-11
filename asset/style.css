@@ -305,6 +305,7 @@ section { padding: 100px 48px; }
   position: absolute;
   inset: 0;
   z-index: 2;
+  transform: scale(1.25);
 }
 .about-photo::before {
   content: '';
