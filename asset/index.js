@@ -1,19 +1,3 @@
-// ── TWEAKS defaults
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accentColor": "#ff0d00",
-  "projectLayout": "list",
-  "showCursor": true,
-  "bgColor": "#080808"
-}/*EDITMODE-END*/;
-let tweaks = {...TWEAK_DEFAULTS};
-
-function applyTweaks() {
-  document.documentElement.style.setProperty('--accent', tweaks.accentColor);
-  document.documentElement.style.setProperty('--accent-dim', tweaks.accentColor + '20');
-  document.documentElement.style.setProperty('--accent-glow', tweaks.accentColor + '55');
-}
-applyTweaks();
-
 // ── NAV scroll
 const navEl = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -21,13 +5,13 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── TICKER
-const skills = ['Laravel', 'PHP', 'MySQL', 'Vue.js', 'REST API', 'Docker', 'Git', 'Tailwind', 'Linux', 'Redis'];
+const skills = ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Docker', 'Linux', 'Git', 'Tailwind', 'AI Automation'];
 const ticker = document.getElementById('ticker-inner');
 const items = [...skills, ...skills].map(s => `<span class="ticker-item"><span>→</span>${s.toUpperCase()}</span>`).join('');
 ticker.innerHTML = items + items; // double for seamless loop
 
 // ── TYPEWRITER
-const roles = ['Fullstack Developer', 'Laravel Expert', 'PHP Engineer', 'API Architect'];
+const roles = ['Web Developer', 'Laravel Developer', 'Systems Operations Specialist', 'Prompt Engineer', 'Troubleshooting Support'];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const typedEl = document.getElementById('typed-role');
 
@@ -101,19 +85,3 @@ function goTo(idx) {
 
 setInterval(() => goTo((curTesti + 1) % cards.length), 4000);
 
-// ── TWEAKS PANEL
-window.addEventListener('message', e => {
-  if (e.data.type === '__activate_edit_mode') { document.getElementById('tweaks-panel').style.display = 'flex'; }
-  if (e.data.type === '__deactivate_edit_mode') { document.getElementById('tweaks-panel').style.display = 'none'; }
-});
-window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-
-document.getElementById('tweak-accent').addEventListener('input', e => {
-  tweaks.accentColor = e.target.value;
-  applyTweaks();
-  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accentColor: e.target.value }}, '*');
-});
-document.getElementById('tweak-layout').addEventListener('change', e => {
-  tweaks.projectLayout = e.target.value;
-  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { projectLayout: e.target.value }}, '*');
-});
