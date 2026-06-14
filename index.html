@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfolio of Akbar Hamonangan Lubis — Web Developer & Systems Operations Specialist. Specializing in Laravel, PHP, MySQL, and AI-assisted automation.">
+<meta name="description" content="Portfolio of Akbar Hamonangan Lubis - Web Developer & Systems Operations Specialist. Specializing in Laravel, PHP, MySQL, and AI-assisted automation.">
 <meta name="keywords" content="Akbar Hamonangan Lubis, Web Developer, Laravel, PHP, Portfolio, Systems Operations">
-<meta property="og:title" content="Akbar Hamonangan Lubis — Web Developer">
+<meta property="og:title" content="Akbar Hamonangan Lubis - Web Developer">
 <meta property="og:description" content="Web Developer & Systems Operations Specialist. Laravel, PHP, MySQL, and automation.">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://akbarhlubis.github.io/">
 <link rel="icon" href="/asset/icon/Favicon.png" type="image/png">
-<title>Akbar Hamonangan Lubis — Web Developer &amp; Systems Operations</title>
+<title>Akbar Hamonangan Lubis - Web Developer &amp; Systems Operations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="/asset/style.css?v=2">
+<link rel="stylesheet" href="/asset/style.css?v=3">
 <link rel="alternate" hreflang="en" href="https://akbarhlubis.github.io/">
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
-  <a class="nav-logo" href="#">AK<span>BAR</span> H.LUBIS</a>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+  <a class="nav-logo" href="#hero">AK<span>BAR</span> H.LUBIS</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
@@ -39,7 +41,7 @@
 <section id="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-  <div class="hero-tag">// PORTFOLIO — 2026</div>
+  <div class="hero-tag">// PORTFOLIO - 2026</div>
   <h1 class="hero-name">
     <span class="first">AKBAR HAMONANGAN</span>
     <span class="last">LUBIS</span>
@@ -63,17 +65,16 @@
 
 <!-- WORKS -->
 <section id="works">
-  <span class="section-tag reveal">// 001 — SELECTED WORKS</span>
+  <span class="section-tag reveal">// 001 - SELECTED WORKS</span>
   <h2 class="section-title reveal">Works I'm <em>Proud</em> Of</h2>
-  <div class="works-filter reveal">
-    <button class="filter-btn active" data-filter="all">ALL</button>
-    <button class="filter-btn" data-filter="web">WEB</button>
-    <button class="filter-btn" data-filter="ai">AI</button>
-    <button class="filter-btn" data-filter="infra">INFRA</button>
+  <div class="works-filter reveal" role="tablist" aria-label="Project categories">
+    <button class="filter-btn active" data-filter="all" type="button">ALL</button>
+    <button class="filter-btn" data-filter="web" type="button">WEB</button>
+    <button class="filter-btn" data-filter="ai" type="button">AI</button>
+    <button class="filter-btn" data-filter="infra" type="button">INFRA</button>
   </div>
   <div class="bento-grid reveal" id="bento-grid">
-    <!-- Card 1: Large -->
-    <div class="project-card big-card" data-cat="infra">
+    <a class="project-card big-card" data-cat="infra" href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" aria-label="Open Paperless NGX repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a1a1a 60%, #0a1a14);">
         <span style="position:relative;z-index:1;">Paperless NGX</span>
       </div>
@@ -82,46 +83,42 @@
         <div class="card-title">Paperless NGX</div>
         <div class="card-desc">Self-hosted Document Management System (DMS) on personal VPS with automated OCR indexing and full-text search for centralized digital archiving.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis" target="_blank">VIEW PROJECT →</a></div>
-    </div>
-    <!-- Card 2 -->
-    <div class="project-card" data-cat="infra">
+      <div class="card-overlay">VIEW PROJECT -&gt;</div>
+    </a>
+    <a class="project-card" data-cat="infra" href="https://github.com/akbarhlubis/ceknotify" target="_blank" rel="noopener noreferrer" aria-label="Open ceknotify repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0d1a1a 60%, #0a1a20);">
         <span style="position:relative;z-index:1;">ceknotify</span>
       </div>
       <div class="card-body">
         <div class="card-tags"><span class="card-tag">GOLANG</span><span class="card-tag">CLI</span><span class="card-tag">NTFY</span></div>
         <div class="card-title">ceknotify</div>
-        <div class="card-desc">Go CLI tool for subscribing to ntfy notification topics — listens for messages and displays real-time desktop notifications for automation alerts and scripts.</div>
+        <div class="card-desc">Go CLI tool for subscribing to ntfy notification topics - listens for messages and displays real-time desktop notifications for automation alerts and scripts.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis/ceknotify" target="_blank">VIEW REPO →</a></div>
-    </div>
-    <!-- Card 3 -->
-    <div class="project-card" data-cat="ai">
+      <div class="card-overlay">VIEW REPO -&gt;</div>
+    </a>
+    <a class="project-card" data-cat="ai" href="https://github.com/akbarhlubis/agent-skills" target="_blank" rel="noopener noreferrer" aria-label="Open Agent Skills repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a0d2a 60%, #2a1040);">
         <span style="position:relative;z-index:1;">agent-skills</span>
       </div>
       <div class="card-body">
         <div class="card-tags"><span class="card-tag">AGENTIC AI</span><span class="card-tag">PROMPT ENGINEERING</span><span class="card-tag">AUTOMATION</span></div>
         <div class="card-title">Agent Skills</div>
-        <div class="card-desc">Curated collection of reusable skill definitions for AI coding agents — E-Kinerja automation, clinical workflow UX, code review, security hardening, and debugging workflows.</div>
+        <div class="card-desc">Curated collection of reusable skill definitions for AI coding agents - E-Kinerja automation, clinical workflow UX, code review, security hardening, and debugging workflows.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis/agent-skills" target="_blank">VIEW REPO →</a></div>
-    </div>
-    <!-- Card 4 -->
-    <div class="project-card" data-cat="web">
+      <div class="card-overlay">VIEW REPO -&gt;</div>
+    </a>
+    <a class="project-card" data-cat="web" href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" aria-label="Open PKBM Budi Mulia LMS repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #101a0d 60%, #0a1408);">
         <span style="position:relative;z-index:1;">PKBM LMS</span>
       </div>
       <div class="card-body">
         <div class="card-tags"><span class="card-tag">LARAVEL</span><span class="card-tag">LMS</span><span class="card-tag">MYSQL</span></div>
-        <div class="card-title">PKBM Budi Mulia — LMS</div>
+        <div class="card-title">PKBM Budi Mulia - LMS</div>
         <div class="card-desc">Preference-based Learning Management System with personalized content delivery (PDF/audio/video) based on assessment quizzes.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis" target="_blank">VIEW PROJECT →</a></div>
-    </div>
-    <!-- Card 5 -->
-    <div class="project-card" data-cat="infra">
+      <div class="card-overlay">VIEW PROJECT -&gt;</div>
+    </a>
+    <a class="project-card" data-cat="infra" href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" aria-label="Open Uptime Kuma repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a0d1a 60%, #201020);">
         <span style="position:relative;z-index:1;">Uptime Kuma</span>
       </div>
@@ -130,10 +127,9 @@
         <div class="card-title">Uptime Kuma (VPS)</div>
         <div class="card-desc">Real-time service monitoring infrastructure with automated downtime alerts integrated with instant messaging for proactive response.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis" target="_blank">VIEW PROJECT →</a></div>
-    </div>
-    <!-- Card 6 -->
-    <div class="project-card" data-cat="web">
+      <div class="card-overlay">VIEW PROJECT -&gt;</div>
+    </a>
+    <a class="project-card" data-cat="web" href="https://github.com/akbarhlubis/rss-feed-extension" target="_blank" rel="noopener noreferrer" aria-label="Open RSS Feed Extension repository">
       <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0d0d1a 60%, #10102a);">
         <span style="position:relative;z-index:1;">RSS Feed</span>
       </div>
@@ -142,14 +138,14 @@
         <div class="card-title">RSS Feed Extension</div>
         <div class="card-desc">Chrome extension for monitoring RSS feeds with multi-URL support, custom check intervals, and real-time content change notifications.</div>
       </div>
-      <div class="card-overlay"><a class="card-link" href="https://github.com/akbarhlubis/rss-feed-extension" target="_blank">VIEW REPO →</a></div>
-    </div>
+      <div class="card-overlay">VIEW REPO -&gt;</div>
+    </a>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <span class="section-tag reveal">// 002 — EXPERTISE</span>
+  <span class="section-tag reveal">// 002 - EXPERTISE</span>
   <h2 class="section-title reveal">How I <em>Build</em> Things</h2>
   <div class="skills-grid reveal" id="skills-grid">
     <div class="skill-group">
@@ -179,7 +175,7 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <span class="section-tag reveal">// 003 — ABOUT ME</span>
+  <span class="section-tag reveal">// 003 - ABOUT ME</span>
   <div class="about-grid">
     <div class="about-photo-wrap reveal">
       <div class="about-photo">
@@ -200,8 +196,8 @@
       <p>When I'm not coding, I'm organizing events at UXiD Lampung, contributing to the local design community, or exploring new tools to improve developer workflow.</p>
       <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
         <a href="#contact" class="btn-primary">HIRE ME</a>
-        <a href="https://github.com/akbarhlubis" target="_blank" class="btn-ghost">GITHUB →</a>
-        <a href="/CV_Akbar%20Hamonangan%20Lubis_24MAR.pdf" download class="btn-ghost">📄 CV →</a>
+        <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost">GITHUB -&gt;</a>
+        <a href="/CV_Akbar%20Hamonangan%20Lubis_24MAR.pdf" download class="btn-ghost">CV -&gt;</a>
       </div>
     </div>
   </div>
@@ -209,22 +205,22 @@
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
-  <span class="section-tag reveal">// 004 — RECOMMENDATIONS</span>
+  <span class="section-tag reveal">// 004 - RECOMMENDATIONS</span>
   <h2 class="section-title reveal">LinkedIn <em>Recommendations</em></h2>
-  <div class="testi-track-wrap reveal">
+  <div class="testi-track-wrap reveal" id="testi-track-wrap">
     <div class="testi-track" id="testi-track">
       <div class="testi-card">
         <p class="testi-text">"Akbar for me is a person with a good personality. He is qualified as a UI/UX and front-end web designer and has been highly dedicated to his skills since studying together in campus. Hard worker, communicative and easy to collaborate with him."</p>
         <div class="testi-author">
           <div class="testi-avatar">IS</div>
-          <div><div class="testi-name"><a href="https://www.linkedin.com/in/akbarhlubis/" target="_blank" class="testi-link">Ichwan Sholihin</a></div><div class="testi-role-label">SOFTWARE DEVELOPER · AXA MANDIRI</div></div>
+          <div><div class="testi-name"><a href="https://www.linkedin.com/in/akbarhlubis/" target="_blank" rel="noopener noreferrer" class="testi-link">Ichwan Sholihin</a></div><div class="testi-role-label">SOFTWARE DEVELOPER - AXA MANDIRI</div></div>
         </div>
       </div>
       <div class="testi-card">
         <p class="testi-text">"A responsible person with the best integrity is the word that can describe Akbar. When I worked with him, he always did his best and delivered the best projection of our team flow, especially when he managed the event on UXiD Lampung. He paid attention to detail to understand the project perfectly. I recommend him as your future project teammate!"</p>
         <div class="testi-author">
           <div class="testi-avatar">RR</div>
-          <div><div class="testi-name"><a href="https://www.linkedin.com/in/akbarhlubis/" target="_blank" class="testi-link">Rahmat Ramadhan</a></div><div class="testi-role-label">CLASS MANAGER · HARISENIN.COM</div></div>
+          <div><div class="testi-name"><a href="https://www.linkedin.com/in/akbarhlubis/" target="_blank" rel="noopener noreferrer" class="testi-link">Rahmat Ramadhan</a></div><div class="testi-role-label">CLASS MANAGER - HARISENIN.COM</div></div>
         </div>
       </div>
     </div>
@@ -236,36 +232,21 @@
 <section id="contact">
   <div class="contact-inner">
     <div class="reveal">
-      <span class="section-tag">// 005 — CONTACT</span>
+      <span class="section-tag">// 005 - CONTACT</span>
       <h2 class="section-title" style="margin-bottom:24px;">Let's <em>Build</em><br>Something</h2>
       <p style="color:var(--muted);font-size:13px;margin-bottom:24px;">Have a project in mind? I'd love to hear about it. Reach out via email or connect with me on socials.</p>
       <a href="mailto:alubis87@gmail.com" class="contact-email">alubis87@gmail.com</a>
-      <div style="display:flex;gap:16px;margin-top:24px;">
-        <a href="https://linkedin.com/in/akbarhlubis" target="_blank" class="btn-ghost" style="font-size:11px;">LINKEDIN →</a>
-        <a href="https://github.com/akbarhlubis" target="_blank" class="btn-ghost" style="font-size:11px;">GITHUB →</a>
+      <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;">
+        <a href="https://linkedin.com/in/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">LINKEDIN -&gt;</a>
+        <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">GITHUB -&gt;</a>
       </div>
-    </div>
-    <div class="contact-form reveal" style="display:none;">
-      <div class="form-field">
-        <label class="form-label">YOUR NAME</label>
-        <input class="form-input" type="text" placeholder="John Doe">
-      </div>
-      <div class="form-field">
-        <label class="form-label">EMAIL</label>
-        <input class="form-input" type="email" placeholder="john@example.com">
-      </div>
-      <div class="form-field">
-        <label class="form-label">MESSAGE</label>
-        <textarea class="form-input" placeholder="Tell me about your project..."></textarea>
-      </div>
-      <button class="btn-primary" style="width:100%;margin-top:8px;">SEND MESSAGE</button>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
-  <span class="section-tag reveal">// 006 — CERTIFICATIONS</span>
+  <span class="section-tag reveal">// 006 - CERTIFICATIONS</span>
   <h2 class="section-title reveal">Verified <em>Credentials</em></h2>
   <div class="certs-grid reveal">
     <div class="cert-card">
@@ -273,7 +254,7 @@
       <div class="cert-body">
         <div class="cert-title">Laravel, Alpine.js &amp; Tailwind CSS</div>
         <div class="cert-issuer">SantriKoding · Jun 2024</div>
-        <a href="https://santrikoding.com" target="_blank" class="cert-link">SK-MI8STPBW78W273T</a>
+        <a href="https://santrikoding.com" target="_blank" rel="noopener noreferrer" class="cert-link">SK-MI8STPBW78W273T</a>
       </div>
     </div>
     <div class="cert-card">
@@ -281,7 +262,7 @@
       <div class="cert-body">
         <div class="cert-title">Git &amp; GitHub (Gold)</div>
         <div class="cert-issuer">Skilvul · Mar 2024</div>
-        <a href="https://skilvul.com" target="_blank" class="cert-link">CGFvxFlPQS2EVB0ueggvTg</a>
+        <a href="https://skilvul.com" target="_blank" rel="noopener noreferrer" class="cert-link">CGFvxFlPQS2EVB0ueggvTg</a>
       </div>
     </div>
     <div class="cert-card">
@@ -289,7 +270,7 @@
       <div class="cert-body">
         <div class="cert-title">Scalable Web Service with Golang</div>
         <div class="cert-issuer">Hacktiv8 · Mar 2024</div>
-        <a href="https://hacktiv8.com" target="_blank" class="cert-link">1957356840-388</a>
+        <a href="https://hacktiv8.com" target="_blank" rel="noopener noreferrer" class="cert-link">1957356840-388</a>
       </div>
     </div>
     <div class="cert-card">
@@ -297,7 +278,7 @@
       <div class="cert-body">
         <div class="cert-title">Basic Web Programming</div>
         <div class="cert-issuer">Dicoding · Oct 2023</div>
-        <a href="https://dicoding.com" target="_blank" class="cert-link">4EXG4OGL9PRL</a>
+        <a href="https://dicoding.com" target="_blank" rel="noopener noreferrer" class="cert-link">4EXG4OGL9PRL</a>
       </div>
     </div>
     <div class="cert-card">
@@ -305,13 +286,14 @@
       <div class="cert-body">
         <div class="cert-title">UI Design For Mobile App</div>
         <div class="cert-issuer">Rubrik Grafis · Jan 2022</div>
-        <span class="cert-link">—</span>
+        <span class="cert-link">-</span>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
-  <span>© 2026 AKBAR HAMONANGAN LUBIS. ALL RIGHTS RESERVED.</span>
+  <span>&copy; 2026 AKBAR HAMONANGAN LUBIS. ALL RIGHTS RESERVED.</span>
   <span>WEB DEVELOPER · LARAVEL · PHP</span>
 </footer>
 
