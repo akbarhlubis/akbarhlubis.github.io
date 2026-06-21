@@ -1,14 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import projects from '../data/projects.json';
-import skills from '../data/skills.json';
-import testimonials from '../data/testimonials.json';
-import certifications from '../data/certifications.json';
+import { getProjects } from '../services/projects';
+import { getSkills } from '../services/skills';
+import { getTestimonials } from '../services/testimonials';
+import { getCertifications } from '../services/certifications';
 import ProjectCard from '../components/ProjectCard.astro';
 import SkillGroup from '../components/SkillGroup.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import CertCard from '../components/CertCard.astro';
 import Ticker from '../components/Ticker.astro';
+
+const projects = await getProjects();
+const skills = await getSkills();
+const testimonials = await getTestimonials();
+const certifications = await getCertifications();
 ---
 
 <BaseLayout>
