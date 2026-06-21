@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/astro/tsconfig.json",
+  "compilerOptions": {
+    "types": ["astro/client"],
+    "strict": true,
+    "jsx": "preserve"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.mjs"],
+  "exclude": ["node_modules", "public", "dist"]
+}
