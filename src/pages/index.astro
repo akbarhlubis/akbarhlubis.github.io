@@ -1,10 +1,9 @@
-<!-- src/pages/index.astro -->
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { projects } from '../data/projects.json';
-import { skills } from '../data/skills.json';
-import { testimonials } from '../data/testimonials.json';
-import { certifications } from '../data/certifications.json';
+import projects from '../data/projects.json';
+import skills from '../data/skills.json';
+import testimonials from '../data/testimonials.json';
+import certifications from '../data/certifications.json';
 import ProjectCard from '../components/ProjectCard.astro';
 import SkillGroup from '../components/SkillGroup.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
@@ -137,6 +136,8 @@ import Ticker from '../components/Ticker.astro';
   </section>
 
   <script>
+    import { initThemeToggle } from '../services/theme.ts';
+
     // Typewriter effect
     const roles = ['Web Developer', 'Laravel Developer', 'Systems Operations Specialist', 'Prompt Engineer', 'Troubleshooting Support'];
     const typedEl = document.getElementById('typed-role');
@@ -253,12 +254,6 @@ import Ticker from '../components/Ticker.astro';
     updateCarousel(0, false);
     startCarousel();
 
-    // Ticker
-    const skills = ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Docker', 'Linux', 'Git', 'Tailwind', 'AI Automation'];
-    const ticker = document.getElementById('ticker-inner');
-    const tickerItems = skills.map(s => `<span class="ticker-item"><span>→</span>${s.toUpperCase()}</span>`).join('');
-    ticker.innerHTML = tickerItems + tickerItems;
-
     // Nav scroll
     const navEl = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -266,7 +261,6 @@ import Ticker from '../components/Ticker.astro';
     }, { passive: true });
 
     // Initialize theme
-    import { initThemeToggle } from '../services/theme.ts';
     initThemeToggle();
   </script>
 </BaseLayout>

@@ -7,13 +7,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
-    "analyze": "astro check --analyze",
-    "lint": "astro lint",
-    "format": "astro format"
+    "check": "astro check"
   },
   "dependencies": {
-    "astro": "latest"
+    "astro": "^5.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0"

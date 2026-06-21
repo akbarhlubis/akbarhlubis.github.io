@@ -3,7 +3,8 @@
   "compilerOptions": {
     "types": ["astro/client"],
     "strict": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.mjs"],
   "exclude": ["node_modules", "public", "dist"]
