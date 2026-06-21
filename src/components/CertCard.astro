@@ -1,0 +1,17 @@
+<!-- src/components/CertCard.astro -->
+---
+const { title, issuer, date, badge, link, code } = Astro.props;
+---
+
+<div class="cert-card">
+  <div class="cert-badge">{badge}</div>
+  <div class="cert-body">
+    <div class="cert-title">{title}</div>
+    <div class="cert-issuer">{issuer} · {date}</div>
+    {link ? (
+      <a href={link} target="_blank" rel="noopener noreferrer" class="cert-link">{code}</a>
+    ) : (
+      <span class="cert-link">{code}</span>
+    )}
+  </div>
+</div>
