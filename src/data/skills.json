@@ -1,0 +1,69 @@
+[
+  {
+    "group": "BACKEND",
+    "skills": [
+      {
+        "name": "Laravel / PHP",
+        "level": "advanced"
+      },
+      {
+        "name": "MySQL / SQL",
+        "level": "advanced"
+      },
+      {
+        "name": "REST API Design",
+        "level": "advanced"
+      },
+      {
+        "name": "Python",
+        "level": "intermediate"
+      },
+      {
+        "name": "Golang",
+        "level": "beginner"
+      }
+    ]
+  },
+  {
+    "group": "FRONTEND",
+    "skills": [
+      {
+        "name": "HTML / CSS / Tailwind",
+        "level": "advanced"
+      },
+      {
+        "name": "Bootstrap",
+        "level": "proficient"
+      },
+      {
+        "name": "JavaScript / jQuery",
+        "level": "proficient"
+      },
+      {
+        "name": "Figma / UI Design",
+        "level": "proficient"
+      }
+    ]
+  },
+  {
+    "group": "DEVOPS / TOOLS",
+    "skills": [
+      {
+        "name": "Git / GitHub",
+        "level": "advanced"
+      },
+      {
+        "name": "Docker / Linux",
+        "level": "proficient"
+      },
+      {
+        "name": "AI-Assisted Automation",
+        "level": "proficient"
+      },
+      {
+        "name": "Prompt Engineering",
+        "level": "proficient"
+      }
+    ]
+  }
+]
