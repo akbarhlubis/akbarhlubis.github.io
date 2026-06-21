@@ -1,0 +1,21 @@
+{
+  "name": "akbarhlubis.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "analyze": "astro check --analyze",
+    "lint": "astro lint",
+    "format": "astro format"
+  },
+  "dependencies": {
+    "astro": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
