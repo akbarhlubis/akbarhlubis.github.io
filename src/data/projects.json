@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Paperless NGX",
+    "category": "infra",
+    "tags": ["DOCKER", "LINUX", "OCR"],
+    "description": "Self-hosted Document Management System (DMS) on personal VPS with automated OCR indexing and full-text search for centralized digital archiving.",
+    "url": "https://github.com/akbarhlubis"
+  },
+  {
+    "title": "ceknotify",
+    "category": "infra",
+    "tags": ["GOLANG", "CLI", "NTFY"],
+    "description": "Go CLI tool for subscribing to ntfy notification topics - listens for messages and displays real-time desktop notifications for automation alerts and scripts.",
+    "url": "https://github.com/akbarhlubis/ceknotify"
+  },
+  {
+    "title": "Agent Skills",
+    "category": "ai",
+    "tags": ["AGENTIC AI", "PROMPT ENGINEERING", "AUTOMATION"],
+    "description": "Curated collection of reusable skill definitions for AI coding agents - E-Kinerja automation, clinical workflow UX, code review, security hardening, and debugging workflows.",
+    "url": "https://github.com/akbarhlubis/agent-skills"
+  },
+  {
+    "title": "PKBM Budi Mulia - LMS",
+    "category": "web",
+    "tags": ["LARAVEL", "LMS", "MYSQL"],
+    "description": "Preference-based Learning Management System with personalized content delivery (PDF/audio/video) based on assessment quizzes.",
+    "url": "https://github.com/akbarhlubis"
+  },
+  {
+    "title": "Uptime Kuma (VPS)",
+    "category": "infra",
+    "tags": ["MONITORING", "LINUX", "VPS"],
+    "description": "Real-time service monitoring infrastructure with automated downtime alerts integrated with instant messaging for proactive response.",
+    "url": "https://github.com/akbarhlubis"
+  },
+  {
+    "title": "RSS Feed Extension",
+    "category": "web",
+    "tags": ["JAVASCRIPT", "CHROME API"],
+    "description": "Chrome extension for monitoring RSS feeds with multi-URL support, custom check intervals, and real-time content change notifications.",
+    "url": "https://github.com/akbarhlubis/rss-feed-extension"
+  }
+]
