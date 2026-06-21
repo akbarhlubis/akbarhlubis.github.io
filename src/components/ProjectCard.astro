@@ -1,0 +1,20 @@
+<!-- src/components/ProjectCard.astro -->
+---
+const { title, category, tags, description, url } = Astro.props;
+---
+
+<a class="project-card" data-cat={category} href={url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} project`}>
+  <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a1a1a 60%, #0a1a14);">
+    <span style="position:relative;z-index:1;">{title}</span>
+  </div>
+  <div class="card-body">
+    <div class="card-tags">
+      {tags.map(tag => (
+        <span class="card-tag" key={tag}>{tag}</span>
+      ))}
+    </div>
+    <div class="card-title">{title}</div>
+    <div class="card-desc">{description}</div>
+  </div>
+  <div class="card-overlay">VIEW PROJECT -&gt;</div>
+</a>

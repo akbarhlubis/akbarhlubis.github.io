@@ -1,0 +1,15 @@
+<!-- src/components/TestimonialCard.astro -->
+---
+const { text, author, link } = Astro.props;
+---
+
+<div class="testi-card">
+  <p class="testi-text">{text}</p>
+  <div class="testi-author">
+    <div class="testi-avatar">{author.avatar}</div>
+    <div>
+      <div class="testi-name"><a href={link} target="_blank" rel="noopener noreferrer" class="testi-link">{author.name}</a></div>
+      <div class="testi-role-label">{author.role}</div>
+    </div>
+  </div>
+</div>

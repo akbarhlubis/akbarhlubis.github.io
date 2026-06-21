@@ -1,0 +1,59 @@
+<!-- src/components/Nav.astro -->
+<nav id="nav">
+  <a class="nav-logo" href="#hero">AKBAR<span>H.LUBIS</span></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#works">Works</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Recommendations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  function setNavOpen(isOpen: boolean): void {
+    const toggleBtn = document.getElementById('nav-toggle') as HTMLElement;
+    const navLinks = document.getElementById('nav-links') as HTMLElement;
+    toggleBtn?.classList.toggle('active', isOpen);
+    navLinks?.classList.toggle('open', isOpen);
+    toggleBtn?.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn?.addEventListener('click', () => {
+      setNavOpen(!navLinks?.classList.contains('open'));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => setNavOpen(false));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('nav')?.contains(e.target)) {
+        setNavOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setNavOpen(false);
+      }
+    });
+  });
+</script>
+
+<style>
+  @media (max-width: 768px) {
+    nav.scrolled {
+      padding: 1rem;
+    }
+  }
+</style>

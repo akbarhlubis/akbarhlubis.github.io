@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getProjects } from '../services/projects';
+import { getSkills } from '../services/skills';
+import { getTestimonials } from '../services/testimonials';
+import { getCertifications } from '../services/certifications';
+import ProjectCard from '../components/ProjectCard.astro';
+import SkillGroup from '../components/SkillGroup.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CertCard from '../components/CertCard.astro';
+import Ticker from '../components/Ticker.astro';
+
+const projects = await getProjects();
+const skills = await getSkills();
+const testimonials = await getTestimonials();
+const certifications = await getCertifications();
+---
+
+<BaseLayout>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-tag">// PORTFOLIO - 2026</div>
+    <h1 class="hero-name">
+      <span class="first">AKBAR HAMONANGAN</span>
+      <span class="last">LUBIS</span>
+    </h1>
+    <div class="hero-role">$ <span class="typed" id="typed-role"></span><span class="cursor" id="cursor"></span></div>
+    <p class="hero-bio">Detail-oriented Web Developer &amp; Systems Operations Specialist with 2+ years of experience in PHP Laravel, MySQL, and workflow automation. Passionate about building reliable applications and streamlining operations with AI-assisted solutions.</p>
+    <div class="hero-cta">
+      <a href="#works" class="btn-primary">VIEW WORKS</a>
+      <a href="#contact" class="btn-ghost">GET IN TOUCH</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span>SCROLL DOWN</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <Ticker />
+
+  <!-- WORKS -->
+  <section id="works">
+    <span class="section-tag reveal">// 001 - SELECTED WORKS</span>
+    <h2 class="section-title reveal">Works I'm <em>Proud</em> Of</h2>
+    <div class="works-filter reveal" role="tablist" aria-label="Project categories">
+      <button class="filter-btn active" data-filter="all" type="button">ALL</button>
+      <button class="filter-btn" data-filter="web" type="button">WEB</button>
+      <button class="filter-btn" data-filter="ai" type="button">AI</button>
+      <button class="filter-btn" data-filter="infra" type="button">INFRA</button>
+    </div>
+    <div class="bento-grid reveal" id="bento-grid">
+      {projects.map(project => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <span class="section-tag reveal">// 002 - EXPERTISE</span>
+    <h2 class="section-title reveal">How I <em>Build</em> Things</h2>
+    <div class="skills-grid reveal" id="skills-grid">
+      {skills.map(skillGroup => (
+        <SkillGroup {...skillGroup} />
+      ))}
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <span class="section-tag reveal">// 003 - ABOUT ME</span>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">
+          <div class="about-frame"></div>
+          <img src="/asset/img/photo-akbar.png" alt="Akbar Hamonangan Lubis" />
+        </div>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">2+</div><div class="stat-label">YEARS EXP</div></div>
+          <div class="stat"><div class="stat-num">6+</div><div class="stat-label">PROJECTS</div></div>
+          <div class="stat"><div class="stat-num">5+</div><div class="stat-label">CLIENTS</div></div>
+          <div class="stat"><div class="stat-num">99.9%</div><div class="stat-label">UPTIME</div></div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <h2 class="section-title" style="margin-bottom:32px;">The <em>Dev</em> Behind the Code</h2>
+        <p>I'm <strong>Akbar Hamonangan Lubis</strong>, a Web Developer &amp; Systems Operations Specialist with hands-on experience in <strong>Laravel, PHP, and MySQL</strong> ecosystems. I build reliable web applications and streamline operations through automation and AI-assisted solutions.</p>
+        <p>My work spans <strong>hospital management systems, document management, event platforms, mentoring systems, and LMS platforms</strong>. I'm passionate about optimizing legacy queries (proven 10x faster load times), diagnosing critical bugs under pressure, and maintaining 99.9% uptime in production environments.</p>
+        <p>When I'm not coding, I'm organizing events at UXiD Lampung, contributing to the local design community, or exploring new tools to improve developer workflow.</p>
+        <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
+          <a href="#contact" class="btn-primary">HIRE ME</a>
+          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost">GITHUB -&gt;</a>
+          <a href="/CV_Akbar Hamonangan Lubis_24MAR.pdf" download class="btn-ghost">CV -&gt;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <span class="section-tag reveal">// 004 - RECOMMENDATIONS</span>
+    <h2 class="section-title reveal">LinkedIn <em>Recommendations</em></h2>
+    <div class="testi-track-wrap reveal" id="testi-track-wrap">
+      <div class="testi-track" id="testi-track">
+        {testimonials.map(testimonial => (
+          <TestimonialCard {...testimonial} />
+        ))}
+      </div>
+    </div>
+    <div class="testi-nav reveal" id="testi-nav"></div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <span class="section-tag reveal">// 006 - CERTIFICATIONS</span>
+    <h2 class="section-title reveal">Verified <em>Credentials</em></h2>
+    <div class="certs-grid reveal">
+      {certifications.map(certification => (
+        <CertCard {...certification} />
+      ))}
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="section-tag">// 005 - CONTACT</span>
+        <h2 class="section-title" style="margin-bottom:24px;">Let's <em>Build</em><br>Something</h2>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:24px;">Have a project in mind? I'd love to hear about it. Reach out via email or connect with me on socials.</p>
+        <a href="mailto:alubis87@gmail.com" class="contact-email">alubis87@gmail.com</a>
+        <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;">
+          <a href="https://linkedin.com/in/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">LINKEDIN -&gt;</a>
+          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">GITHUB -&gt;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { initThemeToggle } from '../services/theme.ts';
+
+    // Typewriter effect
+    const roles = ['Web Developer', 'Laravel Developer', 'Systems Operations Specialist', 'Prompt Engineer', 'Troubleshooting Support'];
+    const typedEl = document.getElementById('typed-role');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (prefersReducedMotion.matches) {
+      typedEl.textContent = roles[0];
+    } else {
+      let roleIdx = 0;
+      let charIdx = 0;
+      let deleting = false;
+
+      function typeRole() {
+        const cur = roles[roleIdx];
+        if (!deleting) {
+          typedEl.textContent = cur.slice(0, ++charIdx);
+          if (charIdx === cur.length) {
+            deleting = true;
+            setTimeout(typeRole, 1800);
+            return;
+          }
+        } else {
+          typedEl.textContent = cur.slice(0, --charIdx);
+          if (charIdx === 0) {
+            deleting = false;
+            roleIdx = (roleIdx + 1) % roles.length;
+          }
+        }
+        setTimeout(typeRole, deleting ? 50 : 80);
+      }
+
+      setTimeout(typeRole, 1400);
+    }
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.filter-btn').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          const show = filter === 'all' || card.dataset.cat === filter;
+          card.classList.toggle('dimmed', !show);
+          card.setAttribute('aria-hidden', String(!show));
+        });
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => obs.observe(el));
+
+    // Testimonials carousel
+    let curTesti = 0;
+    const track = document.getElementById('testi-track');
+    const cards = track.querySelectorAll('.testi-card');
+    const trackWrap = document.getElementById('testi-track-wrap');
+    const nav = document.getElementById('testi-nav');
+    let carouselTimer = null;
+
+    function updateCarousel(index, animate = true) {
+      curTesti = index;
+      const gap = parseFloat(getComputedStyle(track).gap) || 24;
+      const cardWidth = cards[0].getBoundingClientRect().width + gap;
+      if (!animate) track.style.transition = 'none';
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+      if (!animate) requestAnimationFrame(() => {
+        track.style.transition = '';
+      });
+      nav.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Show testimonial ${i + 1}`);
+      dot.addEventListener('click', () => updateCarousel(i));
+      nav.appendChild(dot);
+    });
+
+    function startCarousel() {
+      if (prefersReducedMotion.matches || cards.length < 2 || carouselTimer) return;
+      carouselTimer = setInterval(() => updateCarousel((curTesti + 1) % cards.length), 7000);
+    }
+
+    function stopCarousel() {
+      if (!carouselTimer) return;
+      clearInterval(carouselTimer);
+      carouselTimer = null;
+    }
+
+    trackWrap.addEventListener('mouseenter', stopCarousel);
+    trackWrap.addEventListener('mouseleave', startCarousel);
+    trackWrap.addEventListener('focusin', stopCarousel);
+    trackWrap.addEventListener('focusout', () => {
+      window.setTimeout(() => {
+        if (!trackWrap.contains(document.activeElement)) startCarousel();
+      }, 0);
+    });
+
+    window.addEventListener('resize', () => updateCarousel(curTesti, false));
+
+    updateCarousel(0, false);
+    startCarousel();
+
+    // Nav scroll
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Initialize theme
+    initThemeToggle();
+  </script>
+</BaseLayout>

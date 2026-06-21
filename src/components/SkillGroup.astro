@@ -1,0 +1,14 @@
+<!-- src/components/SkillGroup.astro -->
+---
+const { group, skills } = Astro.props;
+---
+
+<div class="skill-group">
+  <div class="skill-group-name">{group}</div>
+  {skills.map(skill => (
+    <div class="skill-item" key={skill.name}>
+      <span class="skill-name">{skill.name}</span>
+      <span class="skill-level {skill.level}">{skill.level.toUpperCase()}</span>
+    </div>
+  ))}
+</div>

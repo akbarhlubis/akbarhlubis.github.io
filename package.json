@@ -1,0 +1,19 @@
+{
+  "name": "akbarhlubis.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
