@@ -1,0 +1,15 @@
+<!-- src/components/Ticker.astro -->
+---
+const skills = ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Docker', 'Linux', 'Git', 'Tailwind', 'AI Automation'];
+---
+
+<div class="ticker">
+  <div class="ticker-inner" id="ticker-inner">
+    {skills.map(skill => (
+      <span class="ticker-item"><span>→</span>{skill.toUpperCase()}</span>
+    ))}
+    {skills.map(skill => (
+      <span class="ticker-item"><span>→</span>{skill.toUpperCase()}</span>
+    ))}
+  </div>
+</div>
