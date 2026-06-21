@@ -187,7 +187,7 @@ const certifications = await getCertifications();
         const filter = btn.dataset.filter;
         document.querySelectorAll('.project-card').forEach(card => {
           const show = filter === 'all' || card.dataset.cat === filter;
-          card.hidden = !show;
+          card.classList.toggle('dimmed', !show);
           card.setAttribute('aria-hidden', String(!show));
         });
       });
