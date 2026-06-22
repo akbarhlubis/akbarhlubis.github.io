@@ -1,19 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 import { getProjects } from '../services/projects';
 import { getSkills } from '../services/skills';
 import { getTestimonials } from '../services/testimonials';
 import { getCertifications } from '../services/certifications';
+import { getExperiences } from '../services/experience';
 import ProjectCard from '../components/ProjectCard.astro';
 import SkillGroup from '../components/SkillGroup.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import CertCard from '../components/CertCard.astro';
+import ExperienceTimeline from '../components/ExperienceTimeline.astro';
 import Ticker from '../components/Ticker.astro';
 
 const projects = await getProjects();
 const skills = await getSkills();
 const testimonials = await getTestimonials();
 const certifications = await getCertifications();
+const experiences = await getExperiences();
 ---
 
 <BaseLayout>
@@ -26,7 +30,10 @@ const certifications = await getCertifications();
       <span class="first">AKBAR HAMONANGAN</span>
       <span class="last">LUBIS</span>
     </h1>
-    <div class="hero-role">$ <span class="typed" id="typed-role"></span><span class="cursor" id="cursor"></span></div>
+    <div class="hero-role">
+      <span class="hero-prompt" aria-hidden="true"><Icon name="arrow-right" size={14} /></span>
+      <span class="typed" id="typed-role"></span><span class="cursor" id="cursor"></span>
+    </div>
     <p class="hero-bio">Detail-oriented Web Developer &amp; Systems Operations Specialist with 2+ years of experience in PHP Laravel, MySQL, and workflow automation. Passionate about building reliable applications and streamlining operations with AI-assisted solutions.</p>
     <div class="hero-cta">
       <a href="#works" class="btn-primary">VIEW WORKS</a>
@@ -92,16 +99,31 @@ const certifications = await getCertifications();
         <p>When I'm not coding, I'm organizing events at UXiD Lampung, contributing to the local design community, or exploring new tools to improve developer workflow.</p>
         <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
           <a href="#contact" class="btn-primary">HIRE ME</a>
-          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost">GITHUB -&gt;</a>
-          <a href="/CV_Akbar Hamonangan Lubis_24MAR.pdf" download class="btn-ghost">CV -&gt;</a>
+          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-with-icon">
+            <span>GITHUB</span>
+            <Icon name="external" class="btn-icon" size={14} />
+          </a>
+          <a href="/CV_Akbar Hamonangan Lubis_24MAR.pdf" download class="btn-ghost btn-with-icon">
+            <span>CV</span>
+            <Icon name="external" class="btn-icon" size={14} />
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <span class="section-tag reveal">// 004 - EXPERIENCE</span>
+    <h2 class="section-title reveal">Work <em>Timeline</em></h2>
+    <div class="experience-wrap reveal">
+      <ExperienceTimeline experiences={experiences} />
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section id="testimonials">
-    <span class="section-tag reveal">// 004 - RECOMMENDATIONS</span>
+    <span class="section-tag reveal">// 005 - RECOMMENDATIONS</span>
     <h2 class="section-title reveal">LinkedIn <em>Recommendations</em></h2>
     <div class="testi-track-wrap reveal" id="testi-track-wrap">
       <div class="testi-track" id="testi-track">
@@ -128,13 +150,19 @@ const certifications = await getCertifications();
   <section id="contact">
     <div class="contact-inner">
       <div class="reveal">
-        <span class="section-tag">// 005 - CONTACT</span>
+        <span class="section-tag">// 007 - CONTACT</span>
         <h2 class="section-title" style="margin-bottom:24px;">Let's <em>Build</em><br>Something</h2>
         <p style="color:var(--muted);font-size:13px;margin-bottom:24px;">Have a project in mind? I'd love to hear about it. Reach out via email or connect with me on socials.</p>
         <a href="mailto:alubis87@gmail.com" class="contact-email">alubis87@gmail.com</a>
         <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;">
-          <a href="https://linkedin.com/in/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">LINKEDIN -&gt;</a>
-          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="font-size:11px;">GITHUB -&gt;</a>
+          <a href="https://linkedin.com/in/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-with-icon btn-ghost-sm">
+            <span>LINKEDIN</span>
+            <Icon name="external" class="btn-icon" size={14} />
+          </a>
+          <a href="https://github.com/akbarhlubis" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-with-icon btn-ghost-sm">
+            <span>GITHUB</span>
+            <Icon name="external" class="btn-icon" size={14} />
+          </a>
         </div>
       </div>
     </div>

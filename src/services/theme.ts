@@ -4,16 +4,24 @@ export function setTheme(theme: string): void {
 }
 
 export function initThemeToggle(): void {
-  const themeToggle = document.getElementById('theme-toggle') as HTMLElement;
+  const themeToggle = document.getElementById('theme-toggle') as HTMLButtonElement;
   const savedTheme = localStorage.getItem('theme');
 
   if (savedTheme) {
     setTheme(savedTheme);
   }
 
+  const syncToggleState = () => {
+    const current = document.documentElement.getAttribute('data-theme') ?? 'dark';
+    themeToggle?.setAttribute('aria-pressed', String(current === 'light'));
+  };
+
+  syncToggleState();
+
   themeToggle?.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
-    setTheme(current === 'light' ? 'dark' : 'light');
-    themeToggle.textContent = current === 'light' ? '☀️' : '🌙';
+    const next = current === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    syncToggleState();
   });
 }

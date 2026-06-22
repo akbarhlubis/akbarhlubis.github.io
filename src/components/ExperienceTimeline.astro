@@ -1,0 +1,43 @@
+---
+const { experiences } = Astro.props;
+---
+
+<ol class="experience-timeline" role="list">
+  {experiences.map((experience, index) => (
+    <li class="experience-item" data-last={index === experiences.length - 1 ? 'true' : 'false'}>
+      <div class="experience-marker" aria-hidden="true">
+        <span class="experience-dot"></span>
+      </div>
+      <article class="experience-card">
+        <div class="experience-head">
+          <div>
+            <p class="experience-company">{experience.company}</p>
+            <h3 class="experience-role">{experience.role}</h3>
+          </div>
+          <p class="experience-period">{experience.period}</p>
+        </div>
+
+        <p class="experience-description">{experience.description}</p>
+
+        {experience.clients.length > 0 && (
+          <div class="experience-clients" aria-label={`${experience.company} client locations`}>
+            {experience.clients.map(client => (
+              <div class="experience-client">
+                <span class="experience-client-name">{client.name}</span>
+                <span class="experience-client-period">{client.period}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {experience.highlights.length > 0 && (
+          <ul class="experience-highlights">
+            {experience.highlights.map(highlight => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        )}
+      </article>
+    </li>
+  ))}
+</ol>

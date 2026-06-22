@@ -4,7 +4,7 @@ const FALLBACK_CERT: Certification = {
   title: 'Untitled Certification',
   issuer: 'Unknown Issuer',
   date: 'Unknown Date',
-  badge: '🏅',
+  icon: 'award',
   link: '#',
   code: '-',
 };
@@ -14,7 +14,7 @@ function transformCertification(raw: RawCertification): Certification {
     title: raw.title ?? FALLBACK_CERT.title,
     issuer: raw.issuer ?? FALLBACK_CERT.issuer,
     date: raw.date ?? FALLBACK_CERT.date,
-    badge: raw.badge ?? FALLBACK_CERT.badge,
+    icon: raw.icon ?? FALLBACK_CERT.icon,
     link: raw.link ?? FALLBACK_CERT.link,
     code: raw.code ?? FALLBACK_CERT.code,
   };

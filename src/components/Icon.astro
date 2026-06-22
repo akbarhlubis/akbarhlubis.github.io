@@ -1,0 +1,75 @@
+---
+const { name, size = 16, class: className = '' } = Astro.props;
+---
+
+{name === 'sun' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+    <path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1l2.1-2.1M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+  </svg>
+)}
+
+{name === 'moon' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M18.3 14.5A7.5 7.5 0 0 1 9.5 5.7a8.5 8.5 0 1 0 8.8 8.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+  </svg>
+)}
+
+{name === 'arrow-right' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M5 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+)}
+
+{name === 'external' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M9 7H7.5A2.5 2.5 0 0 0 5 9.5v7A2.5 2.5 0 0 0 7.5 19h7A2.5 2.5 0 0 0 17 16.5V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M13 5h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M11 13 19 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+  </svg>
+)}
+
+{name === 'dot' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="3.2" fill="currentColor" />
+  </svg>
+)}
+
+{name === 'award' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="9.5" r="4.2" stroke="currentColor" stroke-width="1.8" />
+    <path d="M9.3 13.1 8.3 21l3.7-2.2 3.7 2.2-1-7.9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+    <path d="M10.1 9.3 11 10.8l1.7.2-1.2 1.2.3 1.7-1.7-.9-1.7.9.3-1.7-1.2-1.2 1.7-.2.9-1.5Z" fill="currentColor" />
+  </svg>
+)}
+
+{name === 'medal' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M8 3h8l-2.2 5.1a5.5 5.5 0 0 0-3.6 0L8 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+    <circle cx="12" cy="14" r="4.2" stroke="currentColor" stroke-width="1.8" />
+    <path d="M12 11.7 13.1 13l1.7.2-1.2 1.2.3 1.7-1.6-.9-1.6.9.3-1.7-1.2-1.2 1.7-.2L12 11.7Z" fill="currentColor" />
+  </svg>
+)}
+
+{name === 'bolt' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M13.5 2 5 13h5l-1 9 10-12h-5l-0.5-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+  </svg>
+)}
+
+{name === 'globe' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+    <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </svg>
+)}
+
+{name === 'palette' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 3a9 9 0 1 0 0 18h2.5a1.5 1.5 0 0 0 1.5-1.5c0-.7-.3-1.2-.8-1.6-.5-.4-1.1-.9-1.1-1.7 0-1.2 1.1-2.2 2.4-2.2H18a5 5 0 0 0 0-10h-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+    <circle cx="8" cy="9" r="1" fill="currentColor" />
+    <circle cx="6.5" cy="13" r="1" fill="currentColor" />
+    <circle cx="10.5" cy="15.2" r="1" fill="currentColor" />
+  </svg>
+)}

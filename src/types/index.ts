@@ -31,7 +31,7 @@ export interface RawCertification {
   title?: string;
   issuer?: string;
   date?: string;
-  badge?: string;
+  icon?: string;
   link?: string;
   code?: string;
 }
@@ -41,6 +41,13 @@ export interface RawExperience {
   role?: string;
   period?: string;
   description?: string;
+  highlights?: string[];
+  clients?: RawExperienceClient[];
+}
+
+export interface RawExperienceClient {
+  name?: string;
+  period?: string;
 }
 
 // Transformed types (used by UI components)
@@ -76,7 +83,7 @@ export interface Certification {
   title: string;
   issuer: string;
   date: string;
-  badge: string;
+  icon: string;
   link: string;
   code: string;
 }
@@ -86,6 +93,13 @@ export interface Experience {
   role: string;
   period: string;
   description: string;
+  highlights: string[];
+  clients: ExperienceClient[];
+}
+
+export interface ExperienceClient {
+  name: string;
+  period: string;
 }
 
 export type SkillLevel = 'advanced' | 'proficient' | 'intermediate' | 'beginner';

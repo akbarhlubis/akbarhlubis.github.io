@@ -1,6 +1,14 @@
-<!-- src/components/Footer.astro -->
+---
+import Icon from './Icon.astro';
+---
 
 <footer>
   <span>&copy; 2026 AKBAR HAMONANGAN LUBIS. ALL RIGHTS RESERVED.</span>
-  <span>WEB DEVELOPER · LARAVEL · PHP</span>
+  <span class="footer-stack">
+    <span>WEB DEVELOPER</span>
+    <Icon name="dot" class="footer-sep" size={8} />
+    <span>LARAVEL</span>
+    <Icon name="dot" class="footer-sep" size={8} />
+    <span>PHP</span>
+  </span>
 </footer>

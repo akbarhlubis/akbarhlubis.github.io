@@ -1,13 +1,20 @@
-<!-- src/components/CertCard.astro -->
 ---
-const { title, issuer, date, badge, link, code } = Astro.props;
+import Icon from './Icon.astro';
+
+const { title, issuer, date, icon, link, code } = Astro.props;
 ---
 
 <div class="cert-card">
-  <div class="cert-badge">{badge}</div>
+  <div class="cert-badge" aria-hidden="true">
+    <Icon name={icon} class="cert-icon" size={24} />
+  </div>
   <div class="cert-body">
     <div class="cert-title">{title}</div>
-    <div class="cert-issuer">{issuer} · {date}</div>
+    <div class="cert-meta">
+      <span class="cert-issuer">{issuer}</span>
+      <Icon name="dot" class="cert-sep" size={8} />
+      <span class="cert-date">{date}</span>
+    </div>
     {link ? (
       <a href={link} target="_blank" rel="noopener noreferrer" class="cert-link">{code}</a>
     ) : (

@@ -1,11 +1,11 @@
-<!-- src/layouts/BaseLayout.astro -->
 ---
 import '../styles/style.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
 ---
 
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,9 @@ import Footer from '../components/Footer.astro';
       <slot />
     </main>
     <Footer />
-    <button class="theme-fab" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+    <button class="theme-fab" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+      <span class="theme-icon theme-icon-sun"><Icon name="sun" size={18} /></span>
+      <span class="theme-icon theme-icon-moon"><Icon name="moon" size={18} /></span>
+    </button>
   </body>
 </html>

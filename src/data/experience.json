@@ -1,14 +1,34 @@
 [
   {
-    "company": "PaperlessHospital",
+    "company": "Paperless Hospital",
     "role": "Web Developer & Systems Operations Specialist",
-    "period": "2023 - Present",
-    "description": "Developing and maintaining hospital management systems (SIMRS) using Laravel and PHP. Managing system operations, troubleshooting critical bugs, and optimizing legacy queries for 10x faster load times. Maintaining 99.9% uptime in production environments."
+    "period": "Sep 2024 - Present",
+    "description": "Developing and maintaining hospital management systems (SIMRS) using Laravel and PHP. Managing system operations, troubleshooting critical bugs, and optimizing legacy queries for 10x faster load times. Maintaining 99.9% uptime in production environments.",
+    "highlights": [
+      "SQL optimization improved load time by 10x",
+      "Monitoring automation for critical services",
+      "99.9% uptime across production workloads"
+    ],
+    "clients": [
+      {
+        "name": "Palembang",
+        "period": "Aug 2024 - Dec 2024"
+      },
+      {
+        "name": "Lampung",
+        "period": "Jan 2025 - Present"
+      }
+    ]
   },
   {
-    "company": "UXiD Lampung",
-    "role": "Event Organizer & Community Contributor",
-    "period": "2022 - Present",
-    "description": "Organizing design community events and contributing to the local UX/UI design community in Lampung. Coordinating workshops, meetups, and networking sessions."
+    "company": "Apiary Academy",
+    "role": "Platform Ops Intern",
+    "period": "Feb 2023 - Oct 2023",
+    "description": "Supported platform operations and content delivery for learning programs. Helped coordinate schedules, improve operational flow, and keep student-facing systems stable during active cohorts.",
+    "highlights": [
+      "Handled 3+ projects per month",
+      "Supported 50+ students"
+    ],
+    "clients": []
   }
 ]

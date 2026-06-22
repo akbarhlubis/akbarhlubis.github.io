@@ -1,15 +1,22 @@
-<!-- src/components/Ticker.astro -->
 ---
+import Icon from './Icon.astro';
+
 const skills = ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'REST API', 'Docker', 'Linux', 'Git', 'Tailwind', 'AI Automation'];
 ---
 
-<div class="ticker">
+<div class="ticker" aria-hidden="true">
   <div class="ticker-inner" id="ticker-inner">
     {skills.map(skill => (
-      <span class="ticker-item"><span>→</span>{skill.toUpperCase()}</span>
+      <span class="ticker-item">
+        <Icon name="dot" class="ticker-icon" size={7} />
+        <span>{skill.toUpperCase()}</span>
+      </span>
     ))}
     {skills.map(skill => (
-      <span class="ticker-item"><span>→</span>{skill.toUpperCase()}</span>
+      <span class="ticker-item">
+        <Icon name="dot" class="ticker-icon" size={7} />
+        <span>{skill.toUpperCase()}</span>
+      </span>
     ))}
   </div>
 </div>

@@ -5,6 +5,8 @@ const FALLBACK_EXPERIENCE: Experience = {
   role: 'Unknown Role',
   period: 'Unknown Period',
   description: 'No description available.',
+  highlights: [],
+  clients: [],
 };
 
 function transformExperience(raw: RawExperience): Experience {
@@ -13,6 +15,13 @@ function transformExperience(raw: RawExperience): Experience {
     role: raw.role ?? FALLBACK_EXPERIENCE.role,
     period: raw.period ?? FALLBACK_EXPERIENCE.period,
     description: raw.description ?? FALLBACK_EXPERIENCE.description,
+    highlights: Array.isArray(raw.highlights) ? raw.highlights : [],
+    clients: Array.isArray(raw.clients)
+      ? raw.clients.map(client => ({
+        name: client?.name ?? 'Unknown Client',
+        period: client?.period ?? 'Unknown Period',
+      }))
+      : [],
   };
 }
 

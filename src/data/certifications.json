@@ -3,7 +3,7 @@
     "title": "Laravel, Alpine.js & Tailwind CSS",
     "issuer": "SantriKoding",
     "date": "Jun 2024",
-    "badge": "🏅",
+    "icon": "award",
     "link": "https://santrikoding.com",
     "code": "SK-MI8STPBW78W273T"
   },
@@ -11,7 +11,7 @@
     "title": "Git & GitHub (Gold)",
     "issuer": "Skilvul",
     "date": "Mar 2024",
-    "badge": "🥇",
+    "icon": "medal",
     "link": "https://skilvul.com",
     "code": "CGFvxFlPQS2EVB0ueggvTg"
   },
@@ -19,7 +19,7 @@
     "title": "Scalable Web Service with Golang",
     "issuer": "Hacktiv8",
     "date": "Mar 2024",
-    "badge": "⚡",
+    "icon": "bolt",
     "link": "https://hacktiv8.com",
     "code": "1957356840-388"
   },
@@ -27,7 +27,7 @@
     "title": "Basic Web Programming",
     "issuer": "Dicoding",
     "date": "Oct 2023",
-    "badge": "🌐",
+    "icon": "globe",
     "link": "https://dicoding.com",
     "code": "4EXG4OGL9PRL"
   },
@@ -35,7 +35,7 @@
     "title": "UI Design For Mobile App",
     "issuer": "Rubrik Grafis",
     "date": "Jan 2022",
-    "badge": "🎨",
+    "icon": "palette",
     "link": "",
     "code": "-"
   }
